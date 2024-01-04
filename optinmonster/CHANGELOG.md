@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to the OptinMonster plugin will be documented in this file.
 
+### 2.15.3 - 2024-01-03
+* Updates to onboarding.
+
 ### 2.15.2 - 2024-01-02
 * Improved onboarding for new users.
 
