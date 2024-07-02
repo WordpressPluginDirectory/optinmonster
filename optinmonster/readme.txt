@@ -4,7 +4,7 @@ Tags: popup, popups, optin, conversion, marketing, newsletter, popup builder, po
 Requires at least: 4.7.0
 Tested up to: 6.5
 Requires PHP: 5.3
-Stable tag: 2.16.1
+Stable tag: 2.16.3
 License: GNU General Public License v2.0 or later
 
 🤩 Make popups & optin forms to get more email newsletter subscribers, leads, and sales - #1 most popular popup builder plugin! 🚀
@@ -69,7 +69,7 @@ Here's why smart business owners, designers, and developers love OptinMonster!
 
 Easily customize the look and feel of your campaigns, and even add dynamic elements like countdown timers, spin a wheel, etc that change based on user behavior (no code necessary).
 
-OptinMonster comes with hundreds of popup templates to help you save time. Easily search them by your industry, business goal, holiday or features.
+OptinMonster comes with hundreds of popup templates to help you save time, far more than competitors like Popup Builder, Popup Maker, Icegram (sometimes called Ice Gram), Sumo or Hustle. Easily search them by your industry, business goal, holiday or features.
 
 > I have never before seen such effectiveness and efficiency in an optin tool than I have with OptinMonster. In under 2 hours of work, I doubled my daily optin rates thanks to OptinMonster’s incredible options.<br />
 > Dave Chesson, Owner of Kindlepreneur <a href="https://optinmonster.com/how-kindlepreneur-increased-customer-retention-using-content-upgrades/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">See Case Study</a>
@@ -113,6 +113,23 @@ Most of them use wp-ajax to setup nalytics. This slows down your site and also r
 Similarly, A/B testing in a most WordPress popup plugins is broken because caching plugins can skew the data.
 
 We fixed both these issues with our superior infrastructure, so you can have reliable A/B testing for popups, accurate conversion analytics, and seamless email marketing / CRM integrations for your marketing (bonus: lead storage & lead backup are included, too).
+
+= Credits =
+
+This WordPress popup plugin is created by <a href="https://thomasgriffin.com/" rel="friend" title="Thomas Griffin">Thomas Griffin</a> and <a href="https://syedbalkhi.com/" rel="friend" title="Syed Balkhi">Syed Balkhi</a>.
+
+= Branding Guideline =
+
+OptinMonster&reg; is a registered trademark of Retyp LLC. When writing about the popup plugin by OptinMonster, please make sure to uppercase the letter O and M.
+
+* OptinMonster (correct)
+* Optin Monster (incorrect)
+* optinmonster (incorrect)
+* optin monster (incorrect)
+
+Exit-Intent&reg;, OnSite Retargeting&reg;, and OnSite Follow Up Campaigns&reg; are also registered trademarks of Retyp LLC.
+
+See our [Press &amp; Brand Assets page](https://optinmonster.com/press/ "OptinMonster Press Page" ) for more details.
 
 == Frequently Asked Questions ==
 
@@ -310,6 +327,16 @@ We also recommend <a href="http://www.wpbeginner.com/">WPBeginner</a> for the be
 == Changelog ==
 
 **Most Recent Changes:**
+
+= Popup Builder 2.16.3 =
+* Improved template filtering.
+* Added custom field support to our MailPoet integration.
+* Improved the campaign creation modal.
+* Security and performance improvements.
+* Various npm package updates used for generating our JavaScript code.
+
+= Popup Builder 2.16.2 =
+* Improved browser coverage.
 
 = Popup Builder 2.16.1 =
 * Improved About Us page.

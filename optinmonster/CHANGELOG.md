@@ -1,6 +1,21 @@
 # Changelog
 All notable changes to the OptinMonster plugin will be documented in this file.
 
+### 2.16.3 - 2024-07-01
+* Improved template filtering.
+* Added custom field support to our MailPoet integration.
+* Improved the campaign creation modal.
+* Security and performance improvements.
+* Various npm package updates used for generating our JavaScript code.
+
+### 2.16.2 - 2024-05-16
+* Improved browser coverage.
+
+### 2.16.1 - 2024-04-23
+* Improved About Us page.
+* Updates and improvements to our Gutenberg block.
+* Various npm package updates used for generating our JavaScript code.
+
 ### 2.16.0 - 2024-02-22
 * Added integration with Uncanny Automator.
 * Improved University page.
