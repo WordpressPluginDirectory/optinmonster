@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to the OptinMonster plugin will be documented in this file.
 
+### 2.16.4 - 2024-07-05
+* Fixed an issue where "Never load on..." output settings were hidden.
+
 ### 2.16.3 - 2024-07-01
 * Improved template filtering.
 * Added custom field support to our MailPoet integration.

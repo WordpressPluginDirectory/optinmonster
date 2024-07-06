@@ -701,9 +701,9 @@ class OMAPI_RestApi extends OMAPI_BaseRestApi {
 
 			// Posts query.
 			$post_types = implode( '","', esc_sql( get_post_types( array( 'public' => true ) ) ) );
-			$posts      = $wpdb->get_results(
-				$wpdb->prepare( "SELECT ID AS `value`, post_title AS `name` FROM {$wpdb->prefix}posts WHERE post_type IN (%s) AND post_status IN('publish', 'future') ORDER BY post_title ASC", $post_types )
-			);
+
+			// phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared -- Already prepared.
+			$posts = $wpdb->get_results( "SELECT ID AS `value`, post_title AS `name` FROM {$wpdb->prefix}posts WHERE post_type IN (\"{$post_types}\") AND post_status IN('publish', 'future') ORDER BY post_title ASC", ARRAY_A );
 		}
 
 		$post_types = ! in_array( 'post_types', $excluded, true )
