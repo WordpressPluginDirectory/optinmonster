@@ -1,6 +1,11 @@
 # Changelog
 All notable changes to the OptinMonster plugin will be documented in this file.
 
+### 2.16.5 - 2024-09-16
+* Support for improved campaign publishing from within the campaign builder.
+* Improved frontend output when no campaigns are assigned to the site.
+* Various npm package updates used for generating our JavaScript code.
+
 ### 2.16.4 - 2024-07-05
 * Fixed an issue where "Never load on..." output settings were hidden.
 
