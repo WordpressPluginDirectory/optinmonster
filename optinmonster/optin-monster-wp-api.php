@@ -5,7 +5,7 @@
  * Description: OptinMonster is the best WordPress popup builder plugin that helps you grow your email newsletter list and sales with email popups, exit intent popups, floating bars and more!
  * Author:      OptinMonster Popup Builder Team
  * Author URI:  https://optinmonster.com
- * Version:     2.16.5
+ * Version:     2.16.7
  * Text Domain: optin-monster-api
  * Domain Path: languages
  *
@@ -69,7 +69,7 @@ class OMAPI {
 	 *
 	 * @var string
 	 */
-	public $version = '2.16.5';
+	public $version = '2.16.7';
 
 	/**
 	 * The name of the plugin.
@@ -139,7 +139,6 @@ class OMAPI {
 		'notifications' => 'OMAPI_Notifications',
 		'classicEditor' => 'OMAPI_ClassicEditor',
 		// @since 2.10.0
-		'wordfence'     => 'OMAPI_Wordfence',
 		'urls'          => 'OMAPI_Urls',
 	);
 
@@ -302,6 +301,13 @@ class OMAPI {
 			update_option( 'omapi_review', $review );
 		}
 
+		// Create a connection token if one doesn't exist, and we're not already connected.
+		$is_connected = ! empty( $option['api']['apikey'] ) && isset( $option['userId'] ) && 0 < absint( $option['userId'] );
+		if ( ! $is_connected && empty( $option['connectionToken'] ) ) {
+			$option['connectionToken'] = wp_hash( get_current_user_id() . site_url() . time() );
+			update_option( 'optin_monster_api', $option );
+		}
+
 		// Check/set the installation date.
 		if ( empty( $option['installed'] ) ) {
 
@@ -375,7 +381,6 @@ class OMAPI {
 		$this->notifications = new OMAPI_Notifications();
 		// phpcs:ignore WordPress.NamingConventions.ValidVariableName.UsedPropertyNotSnakeCase
 		$this->classicEditor = new OMAPI_ClassicEditor();
-		$this->wordfence     = new OMAPI_Wordfence();
 
 		// Fire a hook to say that the admin classes are loaded.
 		do_action( 'optin_monster_api_admin_loaded' );

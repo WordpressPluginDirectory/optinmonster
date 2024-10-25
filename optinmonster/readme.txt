@@ -4,7 +4,7 @@ Tags: popup, popups, optin, conversion, marketing, newsletter, popup builder, po
 Requires at least: 4.7.0
 Tested up to: 6.6
 Requires PHP: 5.3
-Stable tag: 2.16.5
+Stable tag: 2.16.7
 License: GNU General Public License v2.0 or later
 
 🤩 Make popups & optin forms to get more email newsletter subscribers, leads, and sales - #1 most popular popup builder plugin! 🚀
@@ -328,6 +328,16 @@ We also recommend <a href="http://www.wpbeginner.com/">WPBeginner</a> for the be
 
 **Most Recent Changes:**
 
+= Popup Builder 2.16.7 =
+* Improvements to campaign output settings management.
+* UI improvements.
+
+= Popup Builder 2.16.6 =
+* Removed compatibility checks for WordFence as they are no longer needed.
+* Updates to onboarding flow.
+* Improved text when template search returns no results.
+* Various npm package updates used for generating our JavaScript code.
+
 = Popup Builder 2.16.5 =
 * Support for improved campaign publishing from within the campaign builder.
 * Improved frontend output when no campaigns are assigned to the site.
@@ -357,39 +367,5 @@ We also recommend <a href="http://www.wpbeginner.com/">WPBeginner</a> for the be
 * Improved security check for dismiss pointer.
 * Update dependencies for security and performance improvements.
 * Added additional language support for AI popups.
-
-= Popup Builder 2.15.3 =
-* Updates to onboarding.
-
-= Popup Builder 2.15.2 =
-* Improved onboarding for new users.
-
-= Popup Builder 2.15.1 =
-* Updates and improvements to our Gutenberg block.
-* Improved connection flow.
-
-= Popup Builder 2.15.0 =
-* Improved connection flow and onboarding for new/existing users.
-* Fixed filtering bug on Playbooks page.
-* Improved process for those intending to upgrade.
-* Various npm package updates used for generating our JavaScript code.
-
-= Popup Builder 2.14.1 =
-* Updates to the OptinMonster submenu.
-* Removed code related to the output and retrieval of legacy campaigns.
-* Fixed issue where the display rule summary could be blank.
-* Transitioned "Pardot" to "Salesforce Marketing Cloud Account Engagement" to reflect their rebranding.
-* Various npm package updates used for generating our JavaScript code.
-
-= Popup Builder 2.14.0 =
-* UI updates and improvements to template filtering.
-* Update to allow a new integrations to be set as the default integration during creation.
-* Fixed an issue where an integration using Google Analytics 4 could not be created from within the plugin.
-* Fixed an issue where negative numbers could be entered for cookie duration values.
-
-= Popup Builder 2.13.8 =
-* Declares compatibility with WooCommerce High-Performance Order Storage
-* Improvements to campaign template searching and filtering
-* Various improvements and updates to copy
 
 **[View entire popup builder changelog](https://plugins.svn.wordpress.org/optinmonster/trunk/CHANGELOG.md)**

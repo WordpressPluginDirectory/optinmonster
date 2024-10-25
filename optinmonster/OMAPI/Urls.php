@@ -77,12 +77,10 @@ class OMAPI_Urls {
 	 *
 	 * @since 2.2.0
 	 *
-	 * @param  array $args Array of query args.
-	 *
 	 * @return string
 	 */
-	public static function wizard( $args = array() ) {
-		return self::om_admin( 'onboarding-wizard', $args );
+	public static function wizard() {
+		return self::dashboard( array( 'onboarding' => true ) );
 	}
 
 	/**
@@ -132,14 +130,10 @@ class OMAPI_Urls {
 	 *
 	 * @since 2.2.0
 	 *
-	 * @param  array $args Array of query args.
-	 *
 	 * @return string
 	 */
-	public static function onboarding( $args = array() ) {
-		$args = array_merge( $args, array( 'info' => true ) );
-
-		return self::dashboard( $args );
+	public static function onboarding() {
+		return self::wizard();
 	}
 
 	/**

@@ -170,12 +170,6 @@ class OMAPI_Pages {
 				'callback' => array( $this, 'render_app_loading_page' ),
 			);
 
-			$this->pages['optin-monster-onboarding-wizard'] = array(
-				'name'     => __( 'Onboarding Wizard', 'optin-monster-api' ),
-				'callback' => array( $this, 'render_app_loading_page' ),
-				'hidden'   => true,
-			);
-
 			$bfcmitem = $this->should_show_bfcf_menu_item();
 
 			// If user upgradeable, add an upgrade link to menu.
@@ -547,8 +541,20 @@ class OMAPI_Pages {
 				'showReview'      => $this->base->review->should_show_review(),
 				'timezone'        => wp_timezone_string(),
 			);
-			$js_args  = wp_parse_args( $args, $defaults );
-			$js_args  = apply_filters( 'optin_monster_campaigns_js_api_args', $js_args );
+
+			// Add the onboarding connection token if it exists.
+			$connection_token = $this->base->get_option( 'connectionToken' );
+			if ( ! empty( $connection_token ) ) {
+				$args['connectionToken'] = $connection_token;
+			}
+
+			$onboarding_plugins = $this->base->get_option( 'onboardingPlugins', '', array() );
+			if ( ! empty( $onboarding_plugins ) ) {
+				$args['onboardingPlugins'] = $onboarding_plugins;
+			}
+
+			$js_args = wp_parse_args( $args, $defaults );
+			$js_args = apply_filters( 'optin_monster_campaigns_js_api_args', $js_args );
 
 			$loader->localize( $js_args );
 
