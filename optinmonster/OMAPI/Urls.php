@@ -373,7 +373,7 @@ class OMAPI_Urls {
 	 *
 	 * @return array The allowed hosts.
 	 */
-	protected static function allowed_redirect_hosts( $hosts = array() ) {
+	public static function allowed_redirect_hosts( $hosts = array() ) {
 		if ( ! is_array( $hosts ) ) {
 			$hosts = array();
 		}

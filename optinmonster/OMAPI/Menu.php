@@ -133,6 +133,10 @@ class OMAPI_Menu {
 	 * @since 1.0.0
 	 */
 	public function menu() {
+		if ( ! current_user_can( $this->base->access_capability( self::SLUG ) ) ) {
+			return;
+		}
+
 		$this->pages = new OMAPI_Pages();
 		$this->pages->setup();
 
@@ -250,6 +254,10 @@ class OMAPI_Menu {
 	 * @return void
 	 */
 	public function after_menu_registration() {
+		if ( ! current_user_can( $this->base->access_capability( self::SLUG ) ) ) {
+			return;
+		}
+
 		global $submenu;
 
 		// Make sure the about page is still the last page.

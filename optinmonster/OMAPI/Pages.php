@@ -203,51 +203,41 @@ class OMAPI_Pages {
 	 *
 	 * @since 2.11.0
 	 *
-	 * @return bool
+	 * @return bool|array
 	 */
 	public function should_show_bfcf_menu_item() {
 		$now          = new DateTime( 'now', new DateTimeZone( 'America/New_York' ) );
-		$promo_start  = gmdate( 'Y-m-d 10:00:00', strtotime( 'first Monday of November' ) );
-		$bf_end       = gmdate( 'Y-m-d 23:59:59', strtotime( 'first Tuesday of December' ) );
+		$thanksgiving = strtotime( 'fourth Thursday of November' );
+		$promo_start  = gmdate( 'Y-m-d 10:00:00', $thanksgiving - ( 3 * DAY_IN_SECONDS ) );
+		$bf_end       = gmdate( 'Y-m-d 23:59:59', strtotime( 'first Wednesday of December' ) );
 		$is_bf_window = OMAPI_Utils::date_within( $now, $promo_start, $bf_end );
 		$year         = $now->format( 'Y' );
 
 		if ( $is_bf_window ) {
 
 			$url = OMAPI_Urls::marketing(
-				'black-friday/',
+				'pricing',
 				array(
 					'utm_medium'   => 'pluginMenu',
 					'utm_campaign' => "BF{$year}",
 				)
 			);
 
-			$thanksgiving = strtotime( 'fourth Thursday of November' );
-			$bf_start     = gmdate( 'Y-m-d 10:00:00', $thanksgiving - ( 3 * DAY_IN_SECONDS ) );
-			$is_pre_sale  = OMAPI_Utils::date_before( $now, $bf_start );
-
-			if ( ! $is_pre_sale && OMAPI_ApiKey::has_credentials() ) {
-				$url = $this->base->is_lite_user()
-					? OMAPI_Urls::marketing(
-						'pricing-wp/',
-						array(
-							'utm_medium'   => 'pluginMenu',
-							'utm_campaign' => "BF{$year}",
-						)
+			if ( OMAPI_ApiKey::has_credentials() ) {
+				$url = OMAPI_Urls::upgrade(
+					'pluginMenu',
+					'',
+					'',
+					array(
+						'utm_campaign' => "BF{$year}",
+						'feature'      => false,
 					)
-					: OMAPI_Urls::upgrade(
-						'pluginMenu',
-						'',
-						'',
-						array(
-							'utm_campaign' => "BF{$year}",
-							'feature'      => false,
-						)
-					);
+				);
 			}
 
-			$cyber_monday = gmdate( 'Y-m-d 10:00:00', $thanksgiving + ( 4 * DAY_IN_SECONDS ) );
-			$is_cm_window = ! OMAPI_Utils::date_before( $now, $cyber_monday );
+			$cyber_monday = $thanksgiving + ( 4 * DAY_IN_SECONDS );
+			$cm_start     = gmdate( 'Y-m-d 10:00:00', $cyber_monday );
+			$is_cm_window = ! OMAPI_Utils::date_before( $now, $cm_start );
 			return array(
 				'name'      => $is_cm_window
 					? esc_html__( 'Cyber Monday!', 'optin-monster-api' )

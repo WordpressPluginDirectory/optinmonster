@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to the OptinMonster plugin will be documented in this file.
 
+### 2.16.9 - 2024-11-12
+* Internal improvements to for future sales events.
+* Fixed a bug that may occur when generating URLs for use in our menu items.
+
+### 2.16.8 - 2024-11-04
+* Avoid showing sidebar menu for role that does not have access when using User Role Editor plugin.
+* Various npm package updates used for generating our JavaScript code.
+
 ### 2.16.7 - 2024-10-24
 * Improvements to campaign output settings management.
 * UI improvements.
