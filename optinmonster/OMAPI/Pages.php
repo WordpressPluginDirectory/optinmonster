@@ -242,6 +242,9 @@ class OMAPI_Pages {
 				'name'      => $is_cm_window
 					? esc_html__( 'Cyber Monday!', 'optin-monster-api' )
 					: esc_html__( 'Black Friday!', 'optin-monster-api' ),
+				'alternate-name' => $is_cm_window
+					? esc_html__( 'Cyber Monday Sale!', 'optin-monster-api' )
+					: esc_html__( 'Black Friday Sale!', 'optin-monster-api' ),
 				'redirect'  => esc_url_raw( $url ),
 				'callback'  => '__return_null',
 				'highlight' => true,

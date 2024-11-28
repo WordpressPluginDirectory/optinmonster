@@ -1,6 +1,9 @@
 # Changelog
 All notable changes to the OptinMonster plugin will be documented in this file.
 
+### 2.16.10 - 2024-11-27
+* Improve access to future events.
+
 ### 2.16.9 - 2024-11-12
 * Internal improvements to for future sales events.
 * Fixed a bug that may occur when generating URLs for use in our menu items.
