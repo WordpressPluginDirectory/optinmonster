@@ -209,7 +209,7 @@ class OMAPI_Pages {
 		$now          = new DateTime( 'now', new DateTimeZone( 'America/New_York' ) );
 		$thanksgiving = strtotime( 'fourth Thursday of November' );
 		$promo_start  = gmdate( 'Y-m-d 10:00:00', $thanksgiving - ( 3 * DAY_IN_SECONDS ) );
-		$bf_end       = gmdate( 'Y-m-d 23:59:59', strtotime( 'first Wednesday of December' ) );
+		$bf_end       = gmdate( 'Y-m-d 23:59:59', strtotime( 'first Tuesday of December' ) );
 		$is_bf_window = OMAPI_Utils::date_within( $now, $promo_start, $bf_end );
 		$year         = $now->format( 'Y' );
 
