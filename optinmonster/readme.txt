@@ -1,17 +1,17 @@
-=== WordPress Popup Builder & Popup Maker – OptinMonster Email Marketing and Lead Generation ===
+=== Popup Builder & Popup Maker for WordPress – OptinMonster Email Marketing and Lead Generation ===
 Contributors: optinmonster, griffinjt, smub
 Tags: marketing, popup, popups, optin, ecommerce
 Requires at least: 4.7.0
-Tested up to: 6.7
+Tested up to: 6.8
 Requires PHP: 5.3
-Stable tag: 2.16.19
+Stable tag: 2.16.20
 License: GNU General Public License v2.0 or later
 
 🤩 Make popups & optin forms to get more email newsletter subscribers, leads, and sales - #1 most popular popup builder plugin! 🚀
 
 == Description ==
 
-=== The Best WordPress Popup Builder and Email Newsletter Popup Plugin ===
+=== The Best Popup Builder for WordPress and Email Newsletter Popup Plugin ===
 
 OptinMonster is the **<a href="https://optinmonster.com/best-wordpress-popup-plugins/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">best WordPress popup plugin</a>** and the most popular, too! Over 1.2 MILLION smart marketers like you trust us to make sure no good lead goes uncaptured!
 
@@ -23,7 +23,7 @@ OptinMonster turns your website visitors into new leads, subscribers and sales.
 
 https://www.youtube.com/watch?v=qVrgFndEQIY&rel=0
 
-OptinMonster's easy-to-use popup maker makes creating popups and email subscription forms, sticky floating bars, engaging spin-a-wheel campaigns, and interactive popups a breeze.
+OptinMonster's easy-to-use popup maker makes creating pop-ups and email subscription forms, sticky floating bars, engaging spin-a-wheel campaigns, and interactive popups a breeze.
 
 And our mobile popups ensure that your marketing messages look great on all devices.
 
@@ -50,7 +50,7 @@ When you're ready to explode your growth, try <a href="https://optinmonster.com/
 
 Here's why smart business owners, designers, and developers love OptinMonster!
 
-=== Easy Popup Builder From OptinMonster Increase Conversions ===
+=== Easy Pop-up Builder From OptinMonster Increase Conversions ===
 * <a href="https://optinmonster.com/features/lightbox-popups/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Lightbox Popups</a> - Easily create custom popups to grow your email list, show coupons, make a WooCommerce cross-sell or WooCommerce upsell campaign, and more using our popup maker.
 * <a href="https://optinmonster.com/features/floating-bar/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Floating Bar Popups</a> - Create sticky header bars, hello bars and floating bars to show free shipping notices, website announcement alert, sale countdown timer, and more.
 * <a href="https://optinmonster.com/features/slide-in-forms/?utm_source=orgplugin&utm_medium=link&utm_campaign=wpreadme" rel="friend">Slide-in Popups</a> - Create scroll box popups that slide out from bottom of the screen to highlight your offer, like WooCommerce upsells, related posts, and coupon codes.
@@ -327,6 +327,9 @@ We also recommend <a href="http://www.wpbeginner.com/">WPBeginner</a> for the be
 == Changelog ==
 
 **Most Recent Changes:**
+
+= Popup Builder 2.16.20 =
+* Maintenance updates.
 
 = Popup Builder 2.16.19 =
 * Improved support for the WPML plugin
